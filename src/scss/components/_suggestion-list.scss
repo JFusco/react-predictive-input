@@ -1,0 +1,18 @@
+//**
+// Autocomplete suggestion list
+//**
+
+.react-autocomplete {
+	ul {
+		background: $ac-slist-background-color;
+		border-radius: 0 0 $ac-slist-border-radius $ac-slist-border-radius;
+		top: round(($ac-input-height - $ac-input-border-radius) + 2px);
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		position: absolute;
+		z-index: 0;
+		left: 0;
+		width: 100%;
+	}
+}

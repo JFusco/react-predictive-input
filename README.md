@@ -1,2 +1,3 @@
 # react-autocomplete
-React autosuggest component
+
+> WAI-ARIA compliant React autocomplete component

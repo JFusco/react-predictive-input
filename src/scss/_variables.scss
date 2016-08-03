@@ -1,0 +1,40 @@
+//**
+// Autocomplete variables
+//-- Variables may be overridden
+//**
+
+//-- Global UI
+$ac-base-width:                     260px !default;
+$ac-base-border-radius:             5px !default;
+$ac-base-font-family:               "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+
+//-- Input field
+$ac-input-height:                   40px !default;
+$ac-input-width:                    inherit !default;
+$ac-input-font-size:                16px !default;
+$ac-input-border:                   1px solid $light-gray !default;
+$ac-input-font-color:               $dark-gray !default;
+$ac-input-background-color:         $white !default;
+$ac-input-border-radius:            $ac-base-border-radius !default;
+$ac-input-padding:                  0 8px !default;
+$ac-input-placeholder-color:        rgba($dark-gray, 0.5) !default;
+$ac-input-border-focus-color:       darken($light-gray, 15%) !default;
+$ac-input-font-family:              $ac-base-font-family !default;
+$ac-input-typeahead-font-color:     $ac-input-placeholder-color !default;
+
+//-- Suggestion list
+$ac-slist-border-radius:            $ac-base-border-radius !default;
+$ac-slist-background-color:         transparent !default;
+
+//-- Suggestion
+$ac-s-mark-font-color:              $black !default;
+$ac-s-mark-background:              transparent !default;
+$ac-s-mark-font-weight:             700 !default;
+$ac-s-active-background-color:      $lightest-gray !default;
+$ac-s-active-font-color:            $dark-gray !default;
+$ac-s-font-color:                   $dark-gray !default;
+$ac-s-font-size:                    14px !default;
+$ac-s-background-color:             $white !default;
+$ac-s-font-family:                  $ac-base-font-family !default;
+$ac-s-border:                       1px solid $light-gray !default;
+$ac-s-padding:                      9px 5px;

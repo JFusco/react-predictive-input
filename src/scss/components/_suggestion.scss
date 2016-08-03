@@ -1,0 +1,45 @@
+//**
+// Autocomplete suggestion list item
+//**
+
+.react-autocomplete {
+	li {
+		color: $ac-s-font-color;
+		font-size: $ac-s-font-size;
+		background: $ac-s-background-color;
+		font-family: $ac-s-font-family;
+		border-right: $ac-s-border;
+		border-left: $ac-s-border;
+		padding: $ac-s-padding;
+		cursor: pointer;
+		width: inherit;
+		display: block;
+		box-sizing: border-box;
+		transition: background 0.3s ease;
+		-webkit-animation: slide-down 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+		-moz-animation: slide-down 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+		-o-animation: slide-down 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+		animation: slide-down 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+
+		&:first-child {
+			border-top: $ac-s-border;
+		}
+
+		&:last-child {
+			border-bottom-left-radius: $ac-slist-border-radius;
+			border-bottom-right-radius: $ac-slist-border-radius;
+			border-bottom: $ac-s-border;
+		}
+
+		&.active {
+			background: $ac-s-active-background-color;
+			color: $ac-s-active-font-color;
+		}
+
+		mark {
+			background: $ac-s-mark-background;
+			color: $ac-s-mark-font-color;
+			font-weight: $ac-s-mark-font-weight;
+		}
+	}
+}

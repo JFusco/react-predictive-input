@@ -1,0 +1,48 @@
+//**
+// Autocomplete base
+//**
+
+.react-autocomplete {
+	width: $ac-base-width;
+	position: relative;
+}
+
+@-webkit-keyframes slide-down {
+	0% {
+		-webkit-transform: translate3d(8, 0, 0);
+	}
+
+	100% {
+		-webkit-transform: translate3d(0, 0, 0);
+	}
+}
+
+@-moz-keyframes slide-down {
+	0% {
+		-moz-transform: translate3d(0, -9px, 0);
+	}
+
+	100% {
+		-moz-transform: translate3d(0, 0, 0);
+	}
+}
+
+@-o-keyframes slide-down {
+	0% {
+		-o-transform: translate3d(0, -9px, 0);
+	}
+
+	100% {
+		-o-transform: translate3d(0, 0, 0);
+	}
+}
+
+@keyframes slide-down {
+	0% {
+		transform: translate3d(0, -9px, 0);
+	}
+
+	100% {
+		transform: translate3d(0, 0, 0);
+	}
+}
