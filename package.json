@@ -1,6 +1,6 @@
 {
 	"name": "react-autocomplete",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "WAI-ARIA compliant React autocomplete component",
 	"main": "dist-components/Autocomplete.js",
 	"license": "MIT",
@@ -16,10 +16,9 @@
 		"react",
 		"autocomplete",
 		"suggestions",
-		"autosuggestions",
+		"autosuggest",
 		"search",
-		"react component",
-		"es6"
+		"react component"
 	],
 	"peerDependencies": {
 		"react": "^15.3.0",

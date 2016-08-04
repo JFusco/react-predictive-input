@@ -29,10 +29,10 @@ class Autocomplete extends Component {
 	static defaultProps = {
 		data: [],
 		value: '',
-		fuzzy: false,
+		fuzzy: true,
 		placeholder: 'Search',
 		clearValueOnSelect: false,
-		caseSensitive: true
+		caseSensitive: false
 	};
 
 	state = {
