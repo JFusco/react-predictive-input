@@ -1,8 +1,10 @@
 'use strict';
 
+import configuration from '../../config.json';
+
 module.exports = (gulp, $) => {
 	gulp.task('cleanCSS', () => {
-		return gulp.src('./dist/react-autocomplete.css')
+		return gulp.src(`./dist/${configuration.css.fileName}.css`)
 			.pipe($.cleanCss({
 				debug: true
 			}, details => {

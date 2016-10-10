@@ -190,6 +190,6 @@ npm test
 [mit-url]: https://github.com/JFusco/react-autocomplete/blob/master/LICENSE
 [npm-version-image]: https://img.shields.io/npm/v/npm.svg?maxAge=2592000
 [dev-dep-image]: https://david-dm.org/JFusco/react-autocomplete/dev-status.svg
-[dev-dep-url]: https://david-dm.org/JFusco/react-autocomplete#info=devDependencies
+[dev-dep-url]: https://david-dm.org/JFusco/react-autocomplete?type=dev
 [peer-dep-image]: https://david-dm.org/JFusco/react-autocomplete/peer-status.svg
-[peer-dep-url]: https://david-dm.org/JFusco/react-autocomplete#info=peerDependencies
+[peer-dep-url]: https://david-dm.org/JFusco/react-autocomplete?type=peer
