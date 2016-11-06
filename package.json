@@ -1,12 +1,12 @@
 {
 	"name": "react-predictive-input",
-	"version": "1.2.0",
+	"version": "1.2.1",
 	"description": "WAI-ARIA compliant React autocomplete component",
 	"main": "dist/react-autocomplete.js",
 	"license": "MIT",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/JFusco/react-autocomplete"
+		"url": "https://github.com/JFusco/react-predictive-input"
 	},
 	"author": {
 		"name": "Joe Fusco",
