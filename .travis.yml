@@ -4,5 +4,6 @@ node_js:
 before_install:
   - npm install -g gulp
   - npm install -g eslint
+  - npm install -g babel-eslint
 script:
-    - "gulp eslint && npm test"
+    - "npm run lint && npm test"

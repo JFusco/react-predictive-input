@@ -1,7 +1,4 @@
 {
-	"css": {
-		"fileName": "react-autocomplete"
-	},
 	"scripts": {
 		"fileName": "react-autocomplete",
 		"entry": "Autocomplete",

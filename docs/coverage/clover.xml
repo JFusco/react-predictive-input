@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1478455409443" clover="3.2.0">
+  <project timestamp="1478455409443" name="All files">
+    <metrics statements="5" coveredstatements="5" conditionals="8" coveredconditionals="4" methods="3" coveredmethods="2" elements="16" coveredelements="11" complexity="0" loc="5" ncloc="5" packages="1" files="1" classes="1">
+      <file name="Suggestion.js" path="/Users/Rinzler/Projects/Personal/react-predictive-input/src/component/js/Suggestion.js">
+        <metrics statements="5" coveredstatements="5" conditionals="8" coveredconditionals="4" methods="3" coveredmethods="2"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+      </file>
+    </metrics>
+  </project>
+</coverage>

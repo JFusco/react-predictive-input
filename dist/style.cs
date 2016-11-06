@@ -69,7 +69,7 @@
   padding: 0;
   margin: 0;
   position: absolute;
-  z-index: 0;
+  z-index: 999;
   left: 0;
   width: 100%; }
 

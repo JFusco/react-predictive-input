@@ -3,25 +3,16 @@
 import gulp from 'gulp';
 import gulpLoadPlugins from 'gulp-load-plugins';
 
-const $ = gulpLoadPlugins({pattern: ['gulp-*', 'run-sequence', 'del', 'minimist'], scope: ['devDependencies']});
-const argv = $.minimist(process.argv.slice(2));
+const $ = gulpLoadPlugins({pattern: ['gulp-*', 'run-sequence', 'del'], scope: ['devDependencies']});
 
 require('./gulp/bridge.js')(gulp, [
-	'eslint',
-	'scss-lint',
-	'sass',
-	'clean-css',
-	'watch',
-	'clean'
+	'clean',
+	'scss-lint'
 ], $);
 
 gulp.task('default', cb => {
-	$.runSequence('clean', 'sass', 'cleanCSS', 'eslint', () => {
+	$.runSequence('clean', 'scss-lint', () => {
 		$.util.log($.util.colors.green.bold('FINISHED BUILD'));
-
-		if(argv.w){
-			$.runSequence('watch');
-		}
 
 		cb();
 	});

@@ -1,58 +1,40 @@
 'use strict';
 
-import webpack from 'webpack';
 import path from 'path';
-import config from './config.json';
+import plugins from './webpack/plugins';
+import loaders from './webpack/loaders';
+import entry from './webpack/entry';
+import output from './webpack/output';
 
-const { library, entry, fileName } = config.scripts;
+const { NODE_ENV } = process.env;
 
-module.exports =  {
-	entry: {
-		[fileName]: `./src/js/${entry}.js`,
-		[`${fileName}.min`]: `./src/js/${entry}.js`
-	},
-	output: {
-		filename: '[name].js',
-		path: path.join(__dirname, '/dist'),
-		publicPath: '/',
-		libraryTarget: 'umd',
-		library
-	},
+const config = {
+	devtool: NODE_ENV === 'prod' ? 'source-map' : 'eval',
+	entry,
+	output,
 	module: {
-		loaders: [
-			{
-				loader: 'babel',
-				exclude: '/node_modules/',
-				test: /\.js?$/
-			}
-		]
+		loaders
 	},
-	externals: {
-		'react': 'React'
-	},
-	plugins: [
-		new webpack.NoErrorsPlugin(),
-		new webpack.optimize.DedupePlugin(),
-		new webpack.DefinePlugin({
-			'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
-		}),
-		new webpack.optimize.UglifyJsPlugin({
-			include: /\.min\.js$/,
-			comments: false,
-			beautify: false,
-			mangle: {
-				screw_ie8 : true
-			},
-			compress: {
-				warnings: false,
-				drop_console: true
-			},
-			output: {
-				comments: false
-			}
-		})
-	],
+	plugins,
 	resolve: {
 		extensions: ['', '.js']
 	}
 };
+
+if(NODE_ENV === 'prod'){
+	config.externals = {
+		'react': {
+			root: 'React',
+			commonjs2: 'react',
+			commonjs: 'react',
+			amd: 'react'
+		}
+	};
+}else{
+	config.devServer = {
+		contentBase: path.join(__dirname, 'src/component'),
+		port: 8080
+	};
+}
+
+module.exports = config;

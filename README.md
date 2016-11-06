@@ -10,18 +10,35 @@
 
 > WAI-ARIA compliant React autocomplete component
 
+### Demo
+https://jfusco.github.io/react-predictive-input
+
+## Getting Started ##
+
+#### Installation
+From the root of your project.
+```sh
+npm install react-predictive-input --save
+```
+
 ## Usage
 Implementation of autocomplete. See [available options](#options) below.
 ```js
 import React, { Component } from 'react';
 import { render } from 'react-dom';
-import Autocomplete from 'react-autocomplete';
+import Autocomplete from 'react-predictive-input';
 
 class Application extends Component{
+	static defaultProps = {
+        fruit: ['bananas', 'strawberries', 'blueberries', 'pineapples', 'apples', 'tomatos', 'mangos', 'oranges', 'grapes', 'Rasberries', 'Blackberries', 'starfruit']
+    };
+
+    static propTypes = {
+        fruit: PropTypes.arrayOf(PropTypes.string)
+    };
+
 	constructor(props){
 		super(props);
-
-		this.fruit = ['bananas', 'strawberries', 'blueberries', 'pineapples', 'apples', 'tomatos', 'mangos', 'oranges', 'grapes', 'Rasberries', 'Blackberries', 'starfruit'];
 	}
 
 	onItemSelected(value){
@@ -32,9 +49,10 @@ class Application extends Component{
 		return (
 			<div>
 				<Autocomplete
-				 id="1"
-				 placeholder="Fruits"
-				 onSelected={this.onItemSelected.bind(this)} />
+				 id="fruit"
+				 placeholder="Search a type of fruit"
+				 data={this.props.fruit}
+				 onSelected={::this.onItemSelected)} />
 			</div>
 		);
 	}
@@ -59,14 +77,14 @@ render(<Application />, document.getElementById('application'));
 ##### id ~ required
 The unique `id` of the component - used for setting up accessibility
 ```js
-<Autocomplete id="1" />
+<Autocomplete id="fruit" />
 ```
 
 <a name="placeholder"></a>
 ##### placeholder ~ optional ~ default `null`
 A `string` used as placeholder text in the tags input field
 ```js
-<Autocomplete placeholder="Fruits" />
+<Autocomplete placeholder="Search a type of fruit" />
 ```
 
 <a name="data"></a>
@@ -130,7 +148,7 @@ onItemSelected(value) {
 #### Installation
 Import the main SCSS file in to your application SCSS files
 ```scss
-@import "src/scss/components/react-autocomplete";
+@import "node_modules/react-predictive-input/src/component/scss/styles.scss";
 ```
 
 There are a few variables set to `!default` that can be overriden. If you need to change it more just override the actual styles.
@@ -176,7 +194,7 @@ $ac-s-padding
 
 If you don't care to override variables and just want to override actual styles you may choose to import the minified compiled version of the css instead
 ```scss
-@import "dist/react-autocomplete.min.css";
+@import "node_modules/react-predictive-input/dist/styles.css";
 ```
 
 ## Tests ##

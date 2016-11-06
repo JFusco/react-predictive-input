@@ -3,6 +3,8 @@
 import React, { Component } from 'react';
 import SuggestionList from './SuggestionList';
 
+import '../scss/styles.scss';
+
 class Autocomplete extends Component {
 	static KEYS = {
 		enter: 13,
@@ -46,20 +48,13 @@ class Autocomplete extends Component {
 	}
 
 	componentWillMount(){
-		const { value, caseSensitive } = this.props;
+		const { value } = this.props;
 
 		if (value !== ''){
-			const state = {
-				value
-			};
-
-			const val = !caseSensitive ? value.toLowerCase() : value;
-
-			if (this.state.data.indexOf(val) >= 0){
-				state.data = [];
-			}
-
-			this.setState(state);
+			this.setState({
+				value,
+				data: []
+			});
 		}
 	}
 

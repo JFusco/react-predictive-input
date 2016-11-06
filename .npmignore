@@ -1,8 +1,14 @@
 /.idea/
 /__tests__/
 /gulp/
-/src/
+/src/example/
+/src/component/js/
 /coverage/
+/docs/
+/webpack/
+/src/component/index.html
+/src/component/index.js
+demo.gif
 .editorconfig
 .babelrc
 .eslintignore
@@ -13,3 +19,4 @@
 config.json
 gulpfile.babel.js
 webpack.config.babel.js
+webpack.config.example.babel.js
