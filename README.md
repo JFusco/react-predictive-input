@@ -1,4 +1,4 @@
-# react-autocomplete
+# react-predictive-search
 
 [![Build Status][build-image]][build-url]
 
