@@ -1,4 +1,4 @@
-# react-predictive-search
+# react-predictive-input
 
 [![Build Status][build-image]][build-url]
 
