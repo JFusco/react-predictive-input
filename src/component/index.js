@@ -27,6 +27,8 @@ class App extends Component {
 				<Autocomplete
 					id="fruit"
 					placeholder="Search for a type of fruit"
+					fuzzy={false}
+					caseSensitive={true}
 					data={this.props.fruit}
 					onSelected={::this.onItemSelected} />
 			</div>

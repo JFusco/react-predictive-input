@@ -10,7 +10,7 @@
 
 > WAI-ARIA compliant React autocomplete component
 
-### Demo
+## Demo ##
 https://jfusco.github.io/react-predictive-input
 
 ## Getting Started ##
@@ -52,7 +52,7 @@ class Application extends Component{
 				 id="fruit"
 				 placeholder="Search a type of fruit"
 				 data={this.props.fruit}
-				 onSelected={::this.onItemSelected)} />
+				 onSelected={this.onItemSelected.bind(this)} />
 			</div>
 		);
 	}

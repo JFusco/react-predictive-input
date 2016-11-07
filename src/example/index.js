@@ -131,7 +131,7 @@ class App extends Component {
 					<pre>
 						{`<Autocomplete
 	id="fruit"
-	onSelected={::this.onSelected}
+	onSelected={this.onSelected.bind(this)}
 	data={this.props.fruit} />
 
 value: ${this.state.value}`}

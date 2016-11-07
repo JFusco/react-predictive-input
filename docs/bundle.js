@@ -266,7 +266,7 @@ return /******/ (function(modules) { // webpackBootstrap
 						_react2.default.createElement(
 							'pre',
 							null,
-							'<Autocomplete\n\tid="fruit"\n\tonSelected={::this.onSelected}\n\tdata={this.props.fruit} />\n\nvalue: ' + this.state.value
+							'<Autocomplete\n\tid="fruit"\n\tonSelected={this.onSelected.bind(this)}\n\tdata={this.props.fruit} />\n\nvalue: ' + this.state.value
 						)
 					)
 				);
@@ -21777,8 +21777,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 					case Autocomplete.KEYS.right:
 						if (!this.willRenderTypeahead()) return;
-
-						e.preventDefault();
 
 						this.selectSuggestion(this.state.data[0]);
 						break;

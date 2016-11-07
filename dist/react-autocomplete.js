@@ -211,8 +211,6 @@ return /******/ (function(modules) { // webpackBootstrap
 					case Autocomplete.KEYS.right:
 						if (!this.willRenderTypeahead()) return;
 	
-						e.preventDefault();
-	
 						this.selectSuggestion(this.state.data[0]);
 						break;
 	
