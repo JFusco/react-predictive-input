@@ -135,7 +135,7 @@ onInputChange(value) {
 
 <a name="onSelected"></a>
 ##### onSelected ~ optional
-A `method` fired when user selects the input
+A `method` fired when user selects one of the suggested values
 ```js
 onItemSelected(value) {
 	console.log(`${value} is the selected item`);
