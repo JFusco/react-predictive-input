@@ -1,6 +1,6 @@
 {
   "name": "react-predictive-input",
-  "version": "1.2.5",
+  "version": "1.2.6",
   "description": "WAI-ARIA compliant React autocomplete component",
   "main": "dist/react-autocomplete.js",
   "license": "MIT",
