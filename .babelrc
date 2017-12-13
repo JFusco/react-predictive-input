@@ -1,11 +1,11 @@
 {
-	"presets": [
-		"react",
-		"es2015"
-	],
-	"plugins": [
-		"transform-function-bind",
-		"transform-class-properties",
-		"transform-object-rest-spread"
-	]
+  "presets": [
+    "react",
+    "es2015"
+  ],
+  "plugins": [
+    "transform-function-bind",
+    "transform-class-properties",
+    "transform-object-rest-spread"
+  ]
 }

@@ -1,7 +1,7 @@
 {
-	"scripts": {
-		"fileName": "react-autocomplete",
-		"entry": "Autocomplete",
-		"library": "Autocomplete"
-	}
+  "scripts": {
+    "fileName": "react-autocomplete",
+    "entry": "Autocomplete",
+    "library": "Autocomplete"
+  }
 }
